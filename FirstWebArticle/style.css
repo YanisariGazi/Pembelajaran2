@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-image: url(img/floor-tile.png);
+    
 }
 ol, ul {
 	list-style: none;
@@ -42,16 +42,33 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
 
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
 /* style */
 body{
     font: 16px/28px arial, sans-serif;
     background-color: #eaeaea;
+    background-image: url(img/floor-tile.png);
 }
 
 .container{
-    width: 800px;
+    width: 960px;
     margin: auto;
     background-color: white;
 }
@@ -92,28 +109,53 @@ body{
     border-bottom: 5px solid lightskyblue;
 }
 
-.content{
+.main{
+    width: 600px;
     padding: 20px;
+    box-sizing: border-box;
+    float: left;
 }
 
-.content h2{
+.main h2{
     font-size: 30px;
     font-weight: bold;
 }
 
-.content .penulis{
+.main .penulis{
     font-size: 10px;
 }
 
-.content p{
+.main p{
     margin-bottom: 20px;
     font-size: 15px;
     text-align: justify;
 }
 
-.content .penulis a{
+.main .penulis a{
     color: salmon;
     text-decoration: none;
+}
+
+.sidebar{
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+
+.sidebar h3{
+    font-weight: bold;
+
+}
+.sidebar img{
+    height: 200px;
+    float: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar p{
+    text-align: justify;
+    font: 12px/18px arial;
 }
 
 .footer{
