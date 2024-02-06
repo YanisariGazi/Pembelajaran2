@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <style>
+
+        .bungkus {
+            display : flex; /**yang memebuat jadi baris**/
+            gap: 50px; /**kasih jarak antara background-color**/
+        }
+
+        .satu{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 10% 10% 10% 10%;   
+            text-align: center;
+            line-height: 100px;
+            float: left;
+        }
+
+        .dua{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 50% 0% 50% 0%;   
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .tiga{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 50% 50% 50% 50%;   
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .empat{
+            width: 200px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 12rem 12rem 0% 0%;  
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .lima{
+            width: 200px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 0 0 12rem 12rem;  
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .enam{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            border-radius: 0 50% 50% 0%;  
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bungkus">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+        <div class="empat"></div>
+        <div class="lima"></div>
+        <div class="enam"></div>    
+    </div>
+</body>
+</html>
